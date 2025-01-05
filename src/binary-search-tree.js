@@ -1,6 +1,6 @@
 const { NotImplementedError } = require('../extensions/index.js');
 
-// const { Node } = require('../extensions/list-tree.js');
+const { Node } = require('../extensions/list-tree.js');
 
 /**
 * Implement simple binary search tree according to task description
@@ -16,7 +16,7 @@ class BinarySearchTree {
   }
 
   add(data) {
-    const newNode = { data, left: null, right: null };
+    const newNode = new Node(data);
 
     if (this._root === null) {
       this._root = newNode;
